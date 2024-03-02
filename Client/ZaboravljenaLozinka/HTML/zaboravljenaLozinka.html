@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+
+    <title>UposliMe</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- CSS File -->
+    <link rel="stylesheet" href="../CSS/zaboravljenaLozinka.css">
+    <link rel="shortcut icon" href="#">
+</head>
+
+<body>
+    <div class="div1g">
+        <div class="zabLoz">
+
+                <div class="div1">ZABORAVILI STE LOZINKU?</div>
+
+                <div class="div2">
+
+                    <div class="div3L">
+                        <label class="emailLabel" for="email">Unesite email</label><br>
+                        <input class="email" type="text"  id="email" maxlength="100" onchange="removeErrorUnesiEmail(), removeErrorNepostojeciEmail()"><br>
+                        <div class="errorUnesiEmail">
+                            Unesite email!
+                        </div>
+                        <div class="errorNepostojeciEmail">
+                            Nije pronadjen korisnik sa datom email adresom!
+                        </div>
+
+                        
+                        <button class="posaljiKod" type="button">POŠALJI KOD</button>
+                    </div>
+    
+
+
+                    <div class="div3D">
+                        <label class="kodLabel" for="kod">Unesite kod</label><br>
+                        <input class="kod" type="text"   id="kod" maxlength="5" disabled onchange="removeErrorNevalidanKod(), errorRemoveVremeIsteklo()">
+                        <div class="errorNevalidanKod">
+                            Nevalidan kod!
+                        </div>
+                        <div class="errorVremeIsteklo">
+                            Vreme isteklo!
+                        </div>
+                        <p class="tajmer">1:00</p>
+
+                        <!--<button class="resetujPassword" type="button">RESETUJ LOZINKU</button> -->
+                    </div>
+
+
+                </div>
+
+                <div class="div4">
+                    <label class="password1Label" for="password1">Nova lozinka</label><br>
+                    <input class="password1" type="password" id="password1" maxlength="20" required onchange="removeErrorPassword1(), removeErrorNevalidanPassword1()"><br>
+                    <div class="errorPassword1">
+                        Unesite lozinku!
+                    </div>
+                    <div class="errorNevalidanPassword1">
+                        <div style="font-size: .875em;">Lozinka nevalidna!</div>
+                        <div style="font-size: .700em;">*Lozinka mora sadržati: </div>
+                        <div style="font-size: .700em; padding-left: 10%;">1) najmanje 8 karaktera</div>
+                        <div style="font-size: .700em; padding-left: 10%;">2) bar jedno veliko slovo</div>
+                        <div style="font-size: .700em; padding-left: 10%;">3) bar jedan specijalni karakter</div>
+                        <div style="font-size: .700em; padding-left: 10%;">4) bar jedan broj</div>
+                    </div>
+
+                    <label class="password2Label" for="password2">Potvrdite lozinku</label><br>
+                    <input class="password2" type="password" id="password2" maxlength="20" required onchange="removeErrorPassword2(), removeErrorNevalidanPassword2()"><br>
+                    <div class="errorPassword2">
+                            Unesite lozinku!
+                    </div>
+                    <div class="errorNevalidanPassword2">
+                        <div style="font-size: .875em;">Lozinke se ne poklapaju!</div>
+                    </div>
+
+                    <button class="sacuvajBTN" type="button">Sačuvaj</button> 
+                    <div class="poruka" style="color:green">*Lozinka uspesno promenjena!</div>
+                </div>
+
+        </div>
+    </div>
+
+    <div class="div2g">
+        <button class="ulogujSe" type="button" style="--color:#69db3a;--slant:40px;--border:8px">Uloguj se</button> 
+    </div>
+
+    <script src="../JS/zaboravljenaLozinka.js" type="module"></script>
+    <script type="text/javascript">                                     /*skripta error email*/
+        let email = document.querySelector(".email");
+        let errorUnesiEmail = document.querySelector(".errorUnesiEmail");
+            var removeErrorUnesiEmail = function(){
+                errorUnesiEmail.classList.remove('error');
+                email.classList.remove('error');
+            }
+        let errorNepostojeciEmail = document.querySelector(".errorNepostojeciEmail");
+            var removeErrorNepostojeciEmail = function(){
+                errorNepostojeciEmail.classList.remove('error');
+                email.classList.remove('error');
+            }
+    </script>
+
+    <script type="text/javascript">                                     /*skripta error kod*/
+        let kod = document.querySelector(".kod");
+        let errorNevalidanKod = document.querySelector(".errorNevalidanKod");
+            var removeErrorNevalidanKod = function(){
+                errorNevalidanKod.classList.remove('error');
+                kod.classList.remove('error');
+            }
+        let errorVremeIsteklo = document.querySelector(".errorVremeIsteklo");
+            var errorRemoveVremeIsteklo = function(){
+                errorVremeIsteklo.classList.remove('error');
+                kod.classList.remove('error');
+            }
+    </script>
+
+
+
+    <script type="text/javascript"> //skripta za error-e password1
+        let password1 = document.querySelector(".password1");
+        let errorPassword1 = document.querySelector(".errorPassword1");
+            var removeErrorPassword1 = function(){
+                errorPassword1.classList.remove('error');
+                password1.classList.remove('error');
+            }
+        let errorNevalidanPassword1= document.querySelector(".errorNevalidanPassword1");
+            var removeErrorNevalidanPassword1 = function(){
+                errorNevalidanPassword1.classList.remove('error');
+                password1.classList.remove('error');
+            }
+    </script>
+
+
+
+    <script type="text/javascript"> //skripta za error-e password2
+        let password2 = document.querySelector(".password2");
+        let errorPassword2 = document.querySelector(".errorPassword2");
+            var removeErrorPassword2 = function(){
+                errorPassword2.classList.remove('error');
+                password2.classList.remove('error');
+            }
+        let errorNevalidanPassword2= document.querySelector(".errorNevalidanPassword2");
+            var removeErrorNevalidanPassword2 = function(){
+                errorNevalidanPassword2.classList.remove('error');
+                password2.classList.remove('error');
+            }
+    </script>
+
+    
+    
+</body>
+
+</html>

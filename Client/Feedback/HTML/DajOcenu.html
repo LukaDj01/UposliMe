@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DajOcenu</title>
+    <link rel="stylesheet" href="../../Feedback/CSS/DajOcenu.css">
+    <script src="https://kit.fontawesome.com/8c2f075ecf.js" crossorigin="anonymous"></script> 
+    <link rel="shortcut icon" href="#">
+</head>
+<body>
+    <div class="glavni">
+        <div class="PosleOcene">Hvala Vam na oceni!</div>
+        <div class="Naslov">Ocenite prethodnu saradnju</div>
+        <div class="zvezdice">
+            <input type="radio" name="Ocena" id="Ocena5" class="zvezda" value="5">
+            <label for="Ocena5" class="fas fa-star"></label>
+            <input type="radio" name="Ocena" id="Ocena4"class="zvezda"value="4">
+            <label for="Ocena4" class="fas fa-star"></label>
+            <input type="radio" name="Ocena" id="Ocena3"class="zvezda"value="3">
+            <label for="Ocena3" class="fas fa-star"></label>
+            <input type="radio" name="Ocena" id="Ocena2" class="zvezda"value="2">
+            <label for="Ocena2" class="fas fa-star"></label>
+            <input type="radio" name="Ocena" id="Ocena1" class="zvezda"value="1">
+            <label for="Ocena1" class="fas fa-star"></label>
+            <form action="#">
+                <header></header>
+                <div class="textarea">
+                    <textarea class="Komentar" cols="30" placeholder="Unesite kratak komentar o saradnji..."></textarea>
+                </div>
+                <div class="error">Komentar mora sadržati bar 20 karaktera!</div>
+                
+            </form>
+            <div >
+                <button class="oceniDugme" style="display: none;">Oceni</button>
+            </div>
+        </div>
+    </div>
+    <script src="../../Feedback/JS/DajOcenu.js" type="module"></script>
+</body>
+</html>

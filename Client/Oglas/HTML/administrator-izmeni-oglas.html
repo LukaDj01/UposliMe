@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+
+    <title>UposliMe</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- CSS File -->
+    <link rel="stylesheet" href="../../Oglas/CSS/administrator-izmeni-oglas.css">
+    <link rel="shortcut icon" href="#">
+</head>
+
+<body>
+    
+    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+        <h1 style="color:rgb(12, 12, 12)" class="h1 mb-0 text-800">Izmeni oglas</h1>
+    </div>
+    <div class="forma1">
+        
+       <div class="forma2">
+            <!-- <div class="forma2LL">
+                
+
+                
+            </div> -->
+
+            <div class="test1">
+                <div class="test2a">
+
+
+                    <div class="div2b">
+                        <label class="nazivLabel" for="naziv">Naziv</label><br>
+                        <input class="naziv" type="text" id="naziv" maxlength="50"  onchange="removeErrorNaziv(), removeErrorNevalidanNaziv()"><br>
+                        <div class="errorNaziv">
+                            Unesite naziv!
+                        </div>
+                        <div class="errorNevalidanNaziv">
+                            <div>Nevalidan naziv!</div>
+                            <div style="font-size: .700em;">Naziv ne može biti broj! </div>
+                        </div>
+    
+    
+    
+                    <label class="brojPotrebnihRadnikaLabel" for="brojPotrebnihRadnika">Broj potrebnih radnika</label><br>
+                    <input class="brojPotrebnihRadnika" type="text" maxlength="3" id="brojPotrebnihRadnika"  onchange="removeErrorBrojPotrebnihRadnika(); removeErrorNevalidanBrojPotrebnihRadnika()"><br>
+                    <div class="errorBrojPotrebnihRadnika">
+                        Unesite broj potrebnih radnika!
+                    </div>
+                    <div class="errorNevalidanBrojPotrebnihRadnika">
+                    <div>Nevalidan broj radnika!</div>
+                    <div style="font-size: .700em;">*Broj radnika je broj: </div>
+                    <div style="font-size: .700em; padding-left: 10%;">1) veći od 0</div>
+                    <div style="font-size: .700em; padding-left: 10%;">2) manji od 999</div>
+                    </div>
+    
+    
+                    
+                    <label class="rokZaPrijavuLabel" for="rokZaPrijavu">Rok za prijavu na oglas</label><br>
+                    <input class="rokZaPrijavu" type="datetime-local" id="rokZaPrijavu"  onchange="removeErrorRokZaPrijavu(); removeErrorNevalidanRokZaPrijavu()"><br>
+                    <div class="errorRokZaPrijavu">
+                            Unesite rok za prijavu na oglas!
+                    </div>
+                    <div class="errorNevalidanRokZaPrijavu">
+                            Rok za prijavu nevalidan!
+                    </div>
+    
+                    <label class="datumIzvrsavanjaPoslaLabel" for="datumIzvrsavanjaPosla">Datum izvršavanja posla</label><br>
+                    <input class="datumIzvrsavanjaPosla" type="datetime-local"  id="datumIzvrsavanjaPosla"  onchange="removeErrorDatumIzvrsavanjaPosla(); removeErrorNevalidanDatumIzvrsavanjaPosla()"><br>
+                    <div class="errorDatumIzvrsavanjaPosla">
+                            Unesite datum izvršavanja posla!
+                    </div>
+                    <div class="errorNevalidanDatumIzvrsavanjaPosla">
+                            Datum izvršavanja posla nevalidan!
+                    </div>
+    
+    
+                   
+    
+                    </div>
+
+
+
+
+
+                <div class="forma2L">
+                    
+
+                   
+                    
+                    <label class="novacLabel" for="novac">Novac</label><br>
+                    <input class="novac" type="text" maxlength="7" id="novac"  onchange="removeErrorNovac(); removeErrorNevalidanNovac()"><br>
+                    <div class="errorNovac">
+                        Unesite novac!
+                    </div>
+                    <div class="errorNevalidanNovac">
+                    <div>Nevalidan novac!</div>
+                    <div style="font-size: .700em;">*Novac je broj: </div>
+                    <div style="font-size: .700em; padding-left: 10%;">1) veći od 1</div>
+                    <div style="font-size: .700em; padding-left: 10%;">2) manji od 9999999</div>
+                    </div>
+                   
+                    <label class="nacinPlacanjaLabel" for="nacinPlacanja">Način plaćanja</label><br>
+                    <select class="nacinPlacanja nacinPlacanjaVrednost"  onchange="removeErrorNacinPlacanja()"></select></br>
+                    <div class="errorNacinPlacanja">
+                        Izaberite način plaćanja!
+                    </div>
+                   
+                    <label class="zadrugaLabel" for="zadruga">Zadruga</label><br>
+                    <select class="zadruga zadrugaVrednost"  onchange="removeErrorZadruga()"></select></br>
+                    <div class="errorZadruga">
+                        Izaberite zadrugu!
+                    </div>
+
+                    <label class="tipLabel" for="tip">Tip</label><br>
+                    <select class="tip tipVrednost"  onchange="removeErrorTip()"></select></br>
+                    <div class="errorTip">
+                        Izaberite tip posla!
+                    </div>
+                    
+                </div>
+
+                <div class="forma2D">
+                    
+                    
+                    
+                
+                    
+                    <label class="gradLabel" for="grad">Grad</label><br>
+                    <select class="grad gradVrednost"  onchange="removeErrorGrad()"></select></br>
+                    <div class="errorGrad">
+                        Izaberite grad!
+                    </div>
+
+                    <label class="ulicaLabel" for="ulica">Ulica</label><br>
+                    <input class="ulica" type="text" id="ulica" maxlength="50"  onchange="removeErrorUlica(), removeErrorNevalidnaUlica()"><br>
+                    <div class="errorUlica">
+                        Unesite ulicu!
+                    </div>
+                    <div class="errorNevalidnaUlica">
+                        <div>Nevalidna ulica!</div>
+                        <div style="font-size: .700em;">Ulica ne može sadržati specijalne karaktere! </div>
+                    </div>
+                    
+
+                    <label class="brojStanaLabel" for="brojStana">Broj stana</label><br>
+                    <input class="brojStana" type="text" id="brojStana" maxlength="3"  onchange="removeErrorBrojStana()"><br>
+                    <div class="errorNevalidanBrojStana">
+                        Broj stana mora biti pozitivan broj ili BB!
+                    </div>
+
+
+                    <label class="brojUlazaLabel" for="brojUlaza">Broj ulaza</label><br>
+                    <input class="brojUlaza" type="text" maxlength="3" id="brojUlaza" onchange="removeErrorBrojUlaza()"><br>
+                    <div class="errorNevalidanBrojUlaza">
+                        Broj ulaza mora biti pozitivan broj ili BB!
+                    </div>
+                </div>
+
+            </div>
+            
+            <div class="test2b">
+                <label class="opisLabel" for="opis">Opis</label><br>
+                <textarea class="opis" rows="5"  maxlength="10000" onchange="removeErrorUnesiOpis()"></textarea>
+                <div class="errorUnesiOpis">
+                    Unesite opis!
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+       <div class="dugmad">
+        <button class="otkaziIzmenu" type="button">Otkaži izmenu</button> 
+        <button class="izmeniOglas" type="button">Izmeni oglas</button> 
+       </div>
+    </div>
+    <script src="../../Oglas/JS/administrator-izmeni-oglas.js" type="module"></script>  
+    
+
+    
+    <script type="text/javascript"> //skripta za error-e naziv
+        let naziv = document.querySelector(".naziv");
+        let errorNaziv = document.querySelector(".errorNaziv");
+            var removeErrorNaziv = function(){
+                errorNaziv.classList.remove('error');
+                naziv.classList.remove('error');
+            }
+        let errorNevalidanNaziv = document.querySelector(".errorNevalidanNaziv");
+            var removeErrorNevalidanNaziv = function(){
+                errorNevalidanNaziv.classList.remove('error');
+                naziv.classList.remove('error');
+            }
+    </script>
+
+    <script type="text/javascript"> //skripta za error-e brojPotrebnihRadnika
+        let brojPotrebnihRadnika = document.querySelector(".brojPotrebnihRadnika");
+        let errorBrojPotrebnihRadnika = document.querySelector(".errorBrojPotrebnihRadnika");
+            var removeErrorBrojPotrebnihRadnika = function(){
+                errorBrojPotrebnihRadnika.classList.remove('error');
+                brojPotrebnihRadnika.classList.remove('error');
+            }
+        let errorNevalidanBrojPotrebnihRadnika= document.querySelector(".errorNevalidanBrojPotrebnihRadnika");
+            var removeErrorNevalidanBrojPotrebnihRadnika = function(){
+                errorNevalidanBrojPotrebnihRadnika.classList.remove('error');
+                brojPotrebnihRadnika.classList.remove('error');
+            }
+    </script>
+
+    <script type="text/javascript"> //skripta za error-e rokZaPrijavu
+        let rokZaPrijavu = document.querySelector(".rokZaPrijavu");
+        let errorRokZaPrijavu = document.querySelector(".errorRokZaPrijavu");
+            var removeErrorRokZaPrijavu = function(){
+                errorRokZaPrijavu.classList.remove('error');
+                rokZaPrijavu.classList.remove('error');
+            }
+        let errorNevalidanRokZaPrijavu = document.querySelector(".errorNevalidanRokZaPrijavu");
+            var removeErrorNevalidanRokZaPrijavu = function(){
+                errorNevalidanRokZaPrijavu.classList.remove('error');
+                rokZaPrijavu.classList.remove('error');
+            }
+    </script>
+
+    <script type="text/javascript"> //skripta za error-e datumIzvrsavanjaPosla
+        let datumIzvrsavanjaPosla = document.querySelector(".datumIzvrsavanjaPosla");
+        let errorDatumIzvrsavanjaPosla = document.querySelector(".errorDatumIzvrsavanjaPosla");
+            var removeErrorDatumIzvrsavanjaPosla= function(){
+                errorDatumIzvrsavanjaPosla.classList.remove('error');
+                datumIzvrsavanjaPosla.classList.remove('error');
+            }
+        let errorNevalidanDatumIzvrsavanjaPosla = document.querySelector(".errorNevalidanDatumIzvrsavanjaPosla");
+            var removeErrorNevalidanDatumIzvrsavanjaPosla = function(){
+                errorNevalidanDatumIzvrsavanjaPosla.classList.remove('error');
+                datumIzvrsavanjaPosla.classList.remove('error');
+            }
+    </script>
+
+    <script type="text/javascript">//louduj tipove posla
+        var tipovi=[  "Administracija", "Gradjevina", "Dizajn","Elektronika", "Ekonomija","Zabava", "Zdravstvo","IT","Logistika",
+                    "Masinstvo", "Montaza", "Marketing","Mediji","Magacin","Odrzavanje",  "Obezbedjenje","Pravo","Proizvodnja", "Priprema hrane",
+                    "Racunovodstvo", "Stomatologija", "Turizam","Transport", "Umetnost", "Ugostiteljstvo",  "Trgovina", "Ostalo"];
+                      
+        let izaberiTip;
+        izaberiTip= document.createElement("option");
+        izaberiTip.classList.add("izaberiTip");
+        izaberiTip.innerHTML="Izaberi tip";
+        izaberiTip.value="Izaberi tip";
+
+        document.querySelector(".tip").appendChild(izaberiTip);
+
+        tipovi.forEach(ind=>{
+            izaberiTip= document.createElement("option");
+            izaberiTip.innerHTML=ind;
+            izaberiTip.value=ind;
+            document.querySelector(".tip").appendChild(izaberiTip);
+        })
+    </script>
+
+    <script type="text/javascript"> //skripta za error-e tip
+        let tip = document.querySelector(".tip");
+        let errorTip = document.querySelector(".errorTip");
+            var removeErrorTip = function(){
+                tip.classList.remove('error');
+                errorTip.classList.remove('error');
+            
+            }
+    </script>
+
+
+    <script type="text/javascript"> //skripta za error-e novac
+        let novac = document.querySelector(".novac");
+        let errorNovac = document.querySelector(".errorNovac");
+            var removeErrorNovac = function(){
+                novac.classList.remove('error');
+                errorNovac.classList.remove('error');
+            }
+        let errorNevalidanNovac = document.querySelector(".errorNevalidanNovac");
+            var removeErrorNevalidanNovac = function(){
+                novac.classList.remove('error');
+                errorNevalidanNovac.classList.remove('error');
+            }
+    </script>
+
+
+    <script type="text/javascript">//louduj nacine placanja
+        var naciniPlacanja=["Po satu", "Na dnevnom nivou", "Na nedeljnom nivou", "Na mesečnom nivou", "Na tri meseca", "Ostalo"];
+                    
+        let izaberiNacinPlacanja;
+        izaberiNacinPlacanja= document.createElement("option");
+        izaberiNacinPlacanja.classList.add("izaberiNacinPlacanja");
+        izaberiNacinPlacanja.innerHTML="Izaberi način plaćanja";
+        izaberiNacinPlacanja.value="Izaberi način plaćanja";
+
+        document.querySelector(".nacinPlacanja").appendChild(izaberiNacinPlacanja);
+
+        naciniPlacanja.forEach(ind=>{
+            izaberiNacinPlacanja= document.createElement("option");
+            izaberiNacinPlacanja.innerHTML=ind;
+            izaberiNacinPlacanja.value=ind;
+            document.querySelector(".nacinPlacanja").appendChild(izaberiNacinPlacanja);
+        })
+    </script>
+
+    <script type="text/javascript"> //skripta za error-e nacin placanja
+        let nacinPlacanja = document.querySelector(".nacinPlacanja");
+        let errorNacinPlacanja = document.querySelector(".errorNacinPlacanja");
+            var removeErrorNacinPlacanja = function(){
+                nacinPlacanja.classList.remove('error');
+                errorNacinPlacanja.classList.remove('error');
+            
+            }
+    </script>
+
+    
+    
+    <script type="text/javascript">//preuzmi sve zadruge
+        let izaberiZadrugu;
+        izaberiZadrugu= document.createElement("option");
+        izaberiZadrugu.classList.add("izaberiZadrugu");
+        izaberiZadrugu.innerHTML="Izaberi zadrugu";
+        izaberiZadrugu.value="Izaberi zadrugu";
+
+        document.querySelector(".zadruga").appendChild(izaberiZadrugu);
+
+
+                    fetch("http://localhost:5258/Zadruga/PreuzmiImenaSvihZadruga") 
+                    .then( p => {
+                        p.json().then( zadruge => {
+                            
+                                 zadruge.forEach( ind => {
+                                izaberiZadrugu= document.createElement("option");
+                                izaberiZadrugu.innerHTML=ind;
+                                izaberiZadrugu.value=ind;
+                                document.querySelector(".zadruga").appendChild(izaberiZadrugu);
+
+                            });
+                            
+                        })
+                    })
+        
+    </script>
+
+    <script type="text/javascript"> //skripta za error-e zadruga 
+        let zadruga  = document.querySelector(".zadruga ");
+        let errorZadruga = document.querySelector(".errorZadruga");
+            var removeErrorZadruga = function(){
+                zadruga .classList.remove('error');
+                errorZadruga.classList.remove('error');
+            
+            }
+</script>
+
+
+    <script type="text/javascript">//louduj gradove
+        var gradovi=[ "Beograd", "Bor", "Čačak","Jagodina","Kikinda","Kraljevo","Kragujevac","Kruševac","Leskovac",
+                    "Loznica", "Novi Pazar", "Novi Sad", "Niš", "Pančevo", "Pirot", "Požarevac", "Prokuplje",
+                    "Smederevo", "Sombor", "Sremska Mitrovica", "Subotica", "Šabac", "Užice", "Valjevo", "Vranje",
+                    "Vršac",  "Zaječar", "Zrenjanin", "Ostalo"];
+
+        let izaberiGrad;
+        izaberiGrad= document.createElement("option");
+        izaberiGrad.classList.add("izaberiGrad");
+        izaberiGrad.innerHTML="Izaberi grad";
+        izaberiGrad.value="Izaberi grad";
+
+        document.querySelector(".grad").appendChild(izaberiGrad);
+
+        gradovi.forEach(ind=>{
+            izaberiGrad= document.createElement("option");
+            izaberiGrad.innerHTML=ind;
+            izaberiGrad.value=ind;
+            document.querySelector(".grad").appendChild(izaberiGrad);
+        })
+    </script>
+
+    <script type="text/javascript"> //skripta za error-e grad
+        let grad = document.querySelector(".grad");
+        let errorGrad = document.querySelector(".errorGrad");
+            var removeErrorGrad = function(){
+                    grad.classList.remove('error');
+                    errorGrad.classList.remove('error');
+            
+            }
+    </script>
+
+    <script type="text/javascript"> //skripta za error-e ulica
+        let ulica = document.querySelector(".ulica");
+        let errorUlica = document.querySelector(".errorUlica");
+            var removeErrorUlica = function(){
+                ulica.classList.remove('error');
+                errorUlica.classList.remove('error');
+            }
+        let errorNevalidnaUlica = document.querySelector(".errorNevalidnaUlica");
+            var removeErrorNevalidnaUlica = function(){
+                ulica.classList.remove('error');
+                errorNevalidnaUlica.classList.remove('error');
+            }
+    </script>
+
+    <script type="text/javascript"> //skripta za error-e broj ulaza
+        let brojUlaza = document.querySelector(".brojUlaza");
+        let errorNevalidanBrojUlaza = document.querySelector(".errorNevalidanBrojUlaza");
+            var removeErrorBrojUlaza = function(){
+                brojUlaza.classList.remove('error');
+                errorNevalidanBrojUlaza.classList.remove('error');
+            }
+    </script>
+
+    <script type="text/javascript"> //skripta za error-e broj stana
+        let brojStana = document.querySelector(".brojStana");
+        let errorNevalidanBrojStana = document.querySelector(".errorNevalidanBrojStana");
+            var removeErrorBrojStana = function(){
+                brojStana.classList.remove('error');
+                errorNevalidanBrojStana.classList.remove('error');
+            }
+    </script>
+
+<script type="text/javascript"> //skripta za error-e opis
+    let opis = document.querySelector(".opis");
+    let errorUnesiOpis = document.querySelector(".errorUnesiOpis");
+        var removeErrorUnesiOpis = function(){
+            opis.classList.remove('error');
+            errorUnesiOpis.classList.remove('error');
+        }
+</script>
+</body>
+
+</html>

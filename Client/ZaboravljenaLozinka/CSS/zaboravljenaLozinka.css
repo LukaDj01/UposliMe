@@ -1,0 +1,265 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: url('../../Slike/customerService.jpg');
+    background-position: 20%;
+    backdrop-filter: blur(2px);
+    background-size: 100% 100%;
+    font-family: system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans","Liberation Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    
+}
+
+.zabLoz{
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    /*width: 700px;*/
+    background-color: rgb(255, 255, 255);
+    border-radius: 20px;
+    padding: 1%;
+    border: 3px solid rgba(128, 128, 128, 0.651);
+}
+.tajmer,.emailLabel,.kodLabel, .password1Label, .password2Label{
+    font-size: 20px;
+}
+
+/*posalji kod dugme*/
+.posaljiKod, .sacuvajBTN{
+    align-self: center;
+    position: relative;
+    display:block;
+    height: 50px;
+    min-width: 170px;
+    width:100%;
+    margin: 10px 7px;
+    padding: 5px 5px;
+    font-weight: 700;
+    font-size:20px;
+    letter-spacing: 2px;
+    color: #ffffff;
+    border: 2px #383736 solid;
+    border-radius: 8px;
+    text-transform: uppercase;
+    outline: 0;
+    overflow:hidden;
+    background-color: #198754;
+    z-index: 1;
+    cursor: pointer;
+}
+    
+.posaljiKod:hover, .sacuvajBTN:hover{
+    color: #198754;
+}
+  
+.posaljiKod:before, .sacuvajBTN:before{
+    content: "";
+    position: absolute;
+    background: rgb(255, 255, 255);
+    bottom: 0;
+    left: 100%;
+    right: 0;
+    top: 0;
+    z-index: -1;
+    transition: left 0.20s ease-in-out;
+}
+  
+.posaljiKod:hover:before, .sacuvajBTN:hover:before{
+    left: 0;
+}
+  
+.posaljiKod:active:after, .sacuvajBTN:active:after{
+    left: 0;
+    top:0;
+    opacity: 1;
+    transition: 0s;
+}
+  
+.posaljiKod:active, .sacuvajBTN:active{
+    top: 2px;
+}
+
+
+
+.div1{
+    display: flex;
+    font-size: xx-large;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-align:  center;
+}
+
+.div2{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    height: fit-content;
+}
+
+.div3L, .div3D{
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+.div2g{
+    padding-top: 200px;
+    width: 100%;
+    height: fit-content;
+    
+}
+
+.poruka{
+    display: none;
+}
+
+.poruka.prikazi3{
+    display: flex;
+    display: block;
+}
+
+/*Uloguj se dugme*/
+.ulogujSe{
+    display: block;
+    flex: 1 0 auto;
+    position: relative;
+    height: 50px;
+    min-width: 170px;
+    margin: 10px 7px;
+    padding: 5px 5px;
+    font-weight: 700;
+    font-size:18px;
+    letter-spacing: 2px;
+    color:#198754;
+    border: 2px #383736 solid;
+    border-radius: 8px;
+    text-transform: uppercase;
+    outline: 0;
+    overflow:hidden;
+    /*background-color: #198754;*/
+    background-color: white;
+    z-index: 1;
+    cursor: pointer;
+    margin-left: 10%;
+  }
+  
+.ulogujSe:hover{
+    /* color: #198754;*/
+    color: white;
+}
+  
+.ulogujSe:before{
+    content: "";
+    position: absolute;
+    /*background: rgba(255, 255, 255);*/
+    background-color: #198754;
+    bottom: 0;
+    left: 100%;
+    right: 0;
+    top: 0;
+    z-index: -1;
+    transition: left 0.20s ease-in-out;
+}
+  
+.ulogujSe:hover:before{
+    left: 0;
+}
+  
+.ulogujSe:active:after{
+    left: 0;
+    top:0;
+    opacity: 1;
+    transition: 0s;
+}
+  
+.ulogujSe:active{
+    top: 2px;
+}
+
+.div3D{
+    display: none;
+}
+.div3D.prikazi{
+    margin-left: 30px;
+    display: flex;
+    align-content: center;
+    width: 110px;
+
+}
+.kod{
+    width:56px;
+    align-self: center;
+}
+
+.tajmer{
+    align-self: center;
+}
+
+
+.div4{
+    display: none;
+}
+.div4.prikazi2{
+    flex-direction: column;
+    margin-top: 30px;
+    display: flex;
+    margin-left: 7px;
+    width: min-content;
+
+}
+
+
+
+/*animacija za shake*/
+.error{
+    animation: shake 0.2s ease-in-out 0s 2 ;
+    
+}
+
+@keyframes shake {
+    0% { margin-left: 0rem; }
+    25% { margin-left: 0.5rem; }
+    75% { margin-left: -0.5rem; }
+    100% { margin-left: 0rem; }
+  }
+
+.email, .kod, .password1, .password2 {
+    font-size: 20px;
+    margin-bottom: 5px;
+    font-family: system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans","Liberation Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    border: 1px solid #198754;
+    border-radius: 4px;
+} 
+
+.email.error, .kod.error, .password1.error, .password2.error {
+    font-size: 20px;
+    margin-bottom: 5px;
+    font-family: system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans","Liberation Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    border: 1px solid red;
+    border-radius: 4px;
+} 
+
+.errorUnesiEmail, .errorNepostojeciEmail, .errorNevalidanKod, .errorVremeIsteklo, .errorNevalidanPassword1, .errorPassword1, .errorPassword2, .errorNevalidanPassword2{
+    display:none;
+    margin-top: -6px;
+    font-family: system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans","Liberation Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    color:red
+}
+
+.errorUnesiEmail.error, .errorNepostojeciEmail.error, .errorNevalidanKod.error, .errorVremeIsteklo.error, .errorNevalidanPassword1.error, .errorPassword1.error, .errorPassword2.error, .errorNevalidanPassword2.error{
+    display: block;
+}
+
+.errorVremeIsteklo.error{
+    display: flex;
+    align-self: center;
+}

@@ -1,0 +1,52 @@
+
+
+.dugmeAplicirajDiv{
+    display: flex;
+    flex-direction: column;
+}
+
+.dugmeObrisi{
+    align-self: center;
+    position: relative;
+    display:block;
+    height: 33px;
+    min-width: 100px;
+    font-weight: 700;
+    font-size:20px;
+    letter-spacing: 2px;
+    color: #ffffff;
+    border: 1px #383736 solid;
+    border-radius: 4px;
+    outline: 0;
+    background-color: #da4e4e;
+    cursor: pointer;
+  }
+  
+.dugmeObrisi:hover{
+    background-color: #c04545;
+    color: #ffffff;
+}
+
+.dugmeIzmeni{
+    align-self: center;
+    position: relative;
+    display:block;
+    height: 33px;
+    min-width: 100px;
+    font-weight: 700;
+    font-size:20px;
+    letter-spacing: 2px;
+    color: #ffffff;
+    border: 1px #383736 solid;
+    border-radius: 4px;
+    outline: 0;
+    background-color: #4e73df;
+    cursor: pointer;
+    margin: 5px;
+  }
+  
+.dugmeIzmeni:hover{
+    background-color:#4566ca;
+    color: #ffffff;
+}
+

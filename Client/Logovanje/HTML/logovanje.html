@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+
+    <title>UposliMe</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- CSS File -->
+    <link rel="stylesheet" href="../CSS/logovanje.css">
+    <link rel="shortcut icon" href="#">
+</head>
+
+<body>
+
+    <div class="login">
+
+        <h1 class="text1">Dobrodošli!</h1>
+
+        <label class="usernameLabel" for="username">Korisničko ime</label><br>
+        <input class="username" type="text"  id="username" maxlength="20" onchange="removeErrorUnesiUsername(), removeErrorUsernameIPasswordDontMatch()"><br>
+        <div class="errorUsername">
+            Unesite korisnicko ime!
+        </div>
+        <div class="errorUsernameIPasswordDontMatch">
+            <div>Pogrešno korisničko ime ili lozinka!</div>
+        </div>
+
+
+        <label class="passwordLabel" for="password">Lozinka</label><br>
+        <i class="passwordLogo"></i>
+        <input class="password" type="password" id="password" maxlength="20" onchange="removeErroruUnesiPassword(),removeErrorUsernameIPasswordDontMatch()">
+        <div class="errorPassword">
+                Unesite lozinku!
+        </div>
+        <div class="errorUsernameIPasswordDontMatch">
+            <div>Pogrešno korisničko ime ili lozinka!</div>
+        </div>
+
+
+        <div class="registrujSe">
+            <a style="text-decoration:none" href="../../Registracija/HTML/registrovanje.html">Registruj se</a>
+        </div>
+
+        <div class="zabLozinku" >
+            <a style="text-decoration:none" href="../../ZaboravljenaLozinka/HTML/zaboravljenaLozinka.html">Zaboravili ste lozinku?</a>
+        </div>
+
+        <button class="logovanjeBTN" type="button">Uloguj se</button> 
+
+    </div>
+
+    <script type="text/javascript">                                     /*skripta erore*/
+        let username = document.querySelector(".username");
+        let errorUsername = document.querySelector(".errorUsername");
+            var removeErrorUnesiUsername = function(){
+                errorUsername.classList.remove('error');
+                username.classList.remove('error');
+            }
+
+        let password = document.querySelector(".password");
+        let errorPassword = document.querySelector(".errorPassword");
+            var removeErroruUnesiPassword = function(){
+                errorPassword.classList.remove('error');
+                password.classList.remove('error');
+            }
+
+        let errorUsernameIPasswordDontMatch= document.querySelectorAll(".errorUsernameIPasswordDontMatch");
+            var removeErrorUsernameIPasswordDontMatch = function(){
+                errorUsernameIPasswordDontMatch[0].classList.remove('error');                
+                errorUsernameIPasswordDontMatch[1].classList.remove('error');
+                username.classList.remove('error');
+                password.classList.remove('error');
+            }
+    </script>
+
+   
+    <script src="../JS/logovanje.js" type="module"></script>
+</body>
+
+</html>

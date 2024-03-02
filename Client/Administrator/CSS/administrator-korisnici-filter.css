@@ -1,0 +1,214 @@
+.korisnici-filteri{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap-reverse;
+    color: black;
+    width: 100%;
+    align-items: flex-end;
+}
+
+.filteriPrikaz{
+    display: flex;
+    flex-direction: column;
+    grid-template-columns: auto;
+   /*border: 1px solid black;*/
+    min-width: fit-content;
+    margin-bottom: 10px;
+    color: #fff;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #4e73df;
+    min-width: 270px;
+}
+
+.zadrugaFilterDiv, .poslodavacFilterDiv, .zadrugarFilterDiv{
+    display: grid;
+    grid-template-columns: auto auto;
+    margin-left: 7px;
+    margin-right: 7px;
+    margin-bottom: 7px;
+    justify-content: space-between;
+}
+.zadrugarLabela, .zadrugaLabela, .poslodavacLabela{
+    margin-top: 4px;
+    font-size: larger;
+}
+
+.zadrugarVrednost, .zadrugaVrednost, .poslodavacVrednost{
+    margin-left: 5px;
+    background-color: white;
+    border-radius: 8px;
+    border: none;
+    font-family: Nunito,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    width: 25px;
+
+}
+
+.dugmePrimeni, .dugmeOtkazi{
+    margin-top: 10px;
+    align-self: center;
+    position: relative;
+    display:block;
+    height: 33px;
+    min-width: 100px;
+    font-weight: 700;
+    font-size:20px;
+    letter-spacing: 2px;
+    color: #4e73df;
+    border:none;
+    border-radius: 5px;
+    outline: 0;
+    background-color: white;
+    cursor: pointer;
+}
+      
+.dugmePrimeni:hover, .dugmeOtkazi:hover{
+    background-color: #dddddd;
+    color: #466ce0;
+}
+
+.korisniciPrikaz{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    min-width: fit-content;
+    margin-right: 10px;
+}
+
+.korisniciPodaci{
+    width: 900px;
+}
+
+.korisniciDiv{
+    display: flex;
+    flex-wrap: wrap;
+    grid-template-columns: auto auto auto;
+    border: 2px solid #466ce0;
+    border-radius: 7px;
+    margin-bottom: 15px;
+    padding: 10px;
+    min-width: fit-content;
+    justify-content: space-between;
+    background-color: #ffffff;
+}
+
+.naslovOpisDiv{
+    width: 300px;
+}
+
+
+
+
+.brRadBtnAplDiv, .brRadBtnOdustaniDiv{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.brRadnikaDiv{
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+}
+
+.brRadnikaLabela{
+    background-image: url('../../Slike/brRadnika.png');
+    background-size: 100% 100%;
+    height: 30px;
+    width: 30px;
+}
+
+.brRadnikaLabela, .brRadnikaVrednost{
+    margin-right: 10px;
+}
+
+.brRadnikaVrednost{
+    font-size: 20px;
+}
+
+.sortiranjeLabela{
+    margin-right: 10px;
+    color: black;
+}
+
+.sortiranjeDiv{
+    display: flex;
+
+}
+
+.oglasNijeNadjenDiv{
+    border: 5px solid #4e73df;
+    text-align: center;
+}
+
+.porukaNijeNadjen{
+    padding: 30px;
+    color: #081230;
+}
+
+.dugmiciDiv{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.dugmeOtkaziDiv{
+    margin-bottom: 7px;
+    margin-left: 7px;
+}
+
+.dugmePrimeniDiv{
+    margin-bottom: 7px;
+    margin-right: 7px;
+}
+
+.dugmeAplicirajDiv{
+    display: flex;
+    justify-content: end;
+}
+.naslovBrOglasa{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.brOglasa{
+    color: black;
+    padding-top: 10px;
+}
+
+.brOglasaDiv{
+    display: flex;
+}
+
+.naslov{
+    margin-right: 10px;
+}
+
+.izbrisanKorisnik{
+    background-color: #da7171;
+}
+
+/*.zadrugarDugmadDiv, .zadrugaDugmadDiv, .poslodavacDugmadDiv{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}*/
+
+/*.obrisanKorisnikBtn{
+    align-self: center;
+    position: relative;
+    display:block;
+    height: 33px;
+    min-width: 210px;
+    font-weight: 700;
+    font-size:20px;
+    letter-spacing: 2px;
+    color: #ffffff;
+    border: 1px #383736 solid;
+    border-radius: 4px;
+    outline: 0;
+    background-color: #da4e4e;
+    cursor: default;
+}*/

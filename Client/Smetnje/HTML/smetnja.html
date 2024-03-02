@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+
+    <title>UposliMe</title>
+
+
+    <link href="../../Smetnje/CSS/smetnja.css" rel="stylesheet">
+    <link rel="shortcut icon" href="#">
+
+</head>
+
+<body>
+        <div class="smetnjaBodi">
+            
+            <label class="vrstaProblemaLabel" for="vrstaProblema">Vrsta problema</label><br>
+                    <input class="vrstaProblema" type="text"  id="vrstaProblema" maxlength="100" onchange="removeErrorVrstaProblema()"><br>
+                    <div class="errorVrstaProblema">
+                        Unesite vrstu problema!
+                    </div>
+
+            <label class="opisProblemaLabel" for="opisProblema">Opis problema</label><br>
+            <textarea class=" opisProblema" rows="3"  maxlength="10000" onchange="removeErrorOpisProblema()"></textarea>
+            <div class="errorOpisProblema">
+                Unesite opis problema!
+            </div>
+            <div class="dugmad">
+                <button class="posalji" type="button">Posalji</button> 
+            </div>
+            <div class="poslato">
+            Problem uspešno prijavljen.
+            </div>
+        </div>
+    </div>
+    <script src="../../Smetnje/JS/smetnja.js" type="module"></script>
+
+    <script type="text/javascript">     //skripta za error vrsta problema
+        let vrstaProblema=document.querySelector(".vrstaProblema");
+        let errorVrstaProblema = document.querySelector(".errorVrstaProblema");
+        var removeErrorVrstaProblema=function(){
+            vrstaProblema.classList.remove('error');
+            errorVrstaProblema.classList.remove('error');
+        }
+    </script>
+
+    <script type="text/javascript">     //skripta za error opis problema
+        let opisProblema=document.querySelector(".opisProblema");
+        let errorOpisProblema = document.querySelector(".errorOpisProblema");
+        var removeErrorOpisProblema=function(){
+            opisProblema.classList.remove('error');
+            errorOpisProblema.classList.remove('error');
+        }
+    </script>
+</body>
+
+</html>

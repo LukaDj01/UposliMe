@@ -1,0 +1,78 @@
+.glavni, .Forma
+{
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    height: 100%;
+    width: 100%;
+    overflow: none;
+}
+.Forma2
+{   
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-self: center;
+    width: 75%;
+    border: 1px;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 1%;
+    border: solid gray 1px;
+    border-radius: 12px;
+    background: #ffffff;
+    overflow: none;
+}
+.Forma3
+{
+    flex-wrap: wrap;
+    justify-content: space-between;
+    display: flex;
+    flex-direction: row;
+    overflow: none;
+}
+.Levo, .Desno
+{
+    flex-wrap: wrap;
+    display: flex;
+    flex-direction: column;
+    font-family: system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans","Liberation Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+}
+.Opis
+{   
+    overflow: none;
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-family: system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans","Liberation Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+}
+
+.LabeleGore
+{   display: flex;
+    flex-wrap: wrap;
+    font-size: 25px;
+    color: rgb(0, 0, 0);
+    font-family: system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans","Liberation Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    margin-bottom: 1px;
+}
+
+.LabeleDole{
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 20px;
+    font-family: system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans","Liberation Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+}
+
+.korisnikSlika{
+    width: 70px;
+    height: 70px;
+}
+
+.datumDiv{
+    align-self: center;
+}
+
+.datumDiv{
+    margin-top: 20px;
+}

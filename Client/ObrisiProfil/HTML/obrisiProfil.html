@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+
+    <title>UposliMe</title>
+
+
+    <link href="../../ObrisiProfil/CSS/obrisiProfil.css" rel="stylesheet">
+    <link rel="shortcut icon" href="#">
+
+</head>
+
+<body>
+        <div class="smetnjaBodi">
+            
+            <label class="vrstaProblemaLabel" for="vrstaProblema">Razlog brisanja profila</label><br>
+                    <input class="vrstaProblema" type="text"  id="vrstaProblema" maxlength="100" onchange="removeErrorVrstaProblema()"><br>
+                    <div class="errorVrstaProblema">
+                        Unesite razlog brisanja profila!
+                    </div>
+
+            <label class="opisProblemaLabel" for="opisProblema">Opis</label><br>
+            <textarea class=" opisProblema" rows="3"  maxlength="10000" ></textarea>
+            
+            <div class="dugmad">
+                <button class="obrisi" type="button">Obriši</button> 
+            </div>
+          
+        </div>
+    </div>
+    <script src="../../ObrisiProfil/JS/obrisiProfil.js" type="module"></script>
+
+    <script type="text/javascript">     //skripta za error vrsta problema
+        let vrstaProblema=document.querySelector(".vrstaProblema");
+        let errorVrstaProblema = document.querySelector(".errorVrstaProblema");
+        var removeErrorVrstaProblema=function(){
+            vrstaProblema.classList.remove('error');
+            errorVrstaProblema.classList.remove('error');
+        }
+    </script>
+
+</body>
+
+</html>

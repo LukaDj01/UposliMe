@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+
+    <title>UposliMe</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- CSS File -->
+    <link rel="stylesheet" href="../../Poslodavac/CSS/poslodavac-profil-podaci-forma.css">
+    <link rel="shortcut icon" href="#">
+</head>
+
+<body>
+    
+    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+        <h1 style="color:rgb(12, 12, 12)" class="h1 mb-0 text-800">Podaci</h1>
+    </div>
+    <div class="forma1">
+        
+       <div class="forma2">
+            <div class="forma2LL">
+                <div class="div2a" >
+                    <input type="file" class="slikaInput" id="slicka"  accept="image/png, image/jpeg" title="Dodaj sliku" style="color: transparent; display: none;"> 
+                    <div class="slika">
+                        
+                    </div>
+                    <div class="div2a1">
+                        <button class="ukloniSliku">Ukloni sliku</button>
+                        <label class="dodajSliku" for="slicka">Dodaj sliku</label>
+                    </div>
+                </div>
+
+                <div class="div2b">
+                    <label class="nazivLabel" for="naziv">Naziv</label><br>
+                    <input class="naziv" type="text" id="naziv" maxlength="20" required onchange="removeErrorNaziv(), removeErrorNevalidanNaziv()"><br>
+                    <div class="errorNaziv">
+                        Unesite naziv!
+                    </div>
+                    <div class="errorNevalidanNaziv">
+                        <div>Nevalidan naziv!</div>
+                        <div style="font-size: .700em;">Naziv ne može biti broj! </div>
+                    </div>
+
+
+
+                    <label class="pibLabel" for="pib">PIB</label><br>
+                <input class="pib" type="text" maxlength="9" id="pib" required onchange="removeErrorPIB(); removeErrorNevalidanPIB()"><br>
+                <div class="errorPIB">
+                    Unesite PIB!
+                </div>
+                <div class="errorNevalidanPIB">
+                <div>Nevalidan PIB!</div>
+                <div style="font-size: .700em;">*PIB je broj koji sadrži: </div>
+                <div style="font-size: .700em; padding-left: 10%;">1) najmanje 9 cifara</div>
+                <div style="font-size: .700em; padding-left: 10%;">2) najviše 9 cifara</div>
+                </div>
+
+
+                <label class="maticniBrojLabel" for="maticniBroj">Matični broj</label><br>
+                <input class="maticniBroj" type="text" maxlength="8" id="maticniBroj" required onchange="removeErrorMaticniBroj(); removeErrorNevalidanMaticniBroj()" ><br>
+                <div class="errorMaticniBroj">
+                    Unesite matični broj!
+                </div>
+                <div class="errorNevalidanMaticniBroj">
+                    <div>Nevalidan matični broj!</div>
+                    <div style="font-size: .700em;">*Matični broj je broj koji sadrži: </div>
+                    <div style="font-size: .700em; padding-left: 10%;">1) najmanje 8 cifara</div>
+                    <div style="font-size: .700em; padding-left: 10%;">2) najviše 8 cifara</div>
+                </div>
+                </div>
+            </div>
+
+            <div class="test1">
+                <div class="test2a">
+                <div class="forma2L">
+                    
+
+                    <label class="emailLabel" for="email">Email</label><br>
+                    <input class="email" type="text" id="email" disabled  ><br>
+                    
+
+                    <label class="fiksniTelefonLabel" for="fiksniTelefon">Fiksni telefon</label><br>
+                    <input class="fiksniTelefon" type="text" id="fiksniTelefon" maxlength="20" minlength="8" onchange="removeErrorFiksniTelefon(), removeErrorNevalidanFiksniTelefon()"><br>
+                    <div class="errorFiksniTelefon">
+                        Unesite fiksni telefon!
+                    </div>
+                    <div class="errorNevalidanFiksniTelefon">
+                        <div>Nevalidan fiksni telefon!</div>
+                        <div style="font-size: .700em;">Fiksni telefon ne može sadržati slova ili specijalne karaktere! </div>
+                    </div>
+
+                    <label class="mobilniTelefonLabel" for="mobilniTelefon">Mobilni telefon</label><br>
+                    <input class="mobilniTelefon" type="text" id="mobilniTelefon" maxlength="20" minlength="9" onchange="removeErrorMobilniTelefon(), removeErrorNevalidanMobilniTelefon()"><br>
+                    <div class="errorMobilniTelefon">
+                        Unesite mobilni telefon!
+                    </div>
+                    <div class="errorNevalidanMobilniTelefon">
+                        <div>Nevalidan mobilni telefon!</div>
+                        <div style="font-size: .700em;">Mobilni telefon ne može sadržati slova ili specijalne karaktere! </div>
+                    </div>
+
+                    <label class="delatnostLabel" for="delatnost">Delatnost</label><br>
+                    <input class="delatnost" type="text" id="delatnost" maxlength="50" onchange="removeErrorDelatnost(), removeErrorNevalidnaDelatnost()"><br>
+                    <div class="errorDelatnost">
+                        Unesite delatnost!
+                    </div>
+                    <div class="errorNevalidnaDelatnost">
+                        <div>Nevalidna delatnost!</div>
+                        <div style="font-size: .700em;">Delatnost ne moze biti broj ili specijalni karakter! </div>
+                    </div>
+
+                    
+                </div>
+
+                <div class="forma2D">
+                    
+                    
+                    
+                
+                    
+                    <label class="gradLabel" for="grad">Grad</label><br>
+                    <input class="grad" type="text" id="grad" maxlength="20"   onchange="removeErrorGrad(), removeErrorNevalidanGrad()"><br>
+                    <div class="errorGrad">
+                        Unesite grad!
+                    </div>
+                    <div class="errorNevalidanGrad">
+                        <div>Nevalidan grad!</div>
+                        <div style="font-size: .700em;">Grad ne može sadržati slova ili specijalne karaktere! </div>
+                    </div>
+
+                    <label class="ulicaLabel" for="ulica">Ulica</label><br>
+                    <input class="ulica" type="text" id="ulica" maxlength="50"  onchange="removeErrorUlica(), removeErrorNevalidnaUlica()"><br>
+                    <div class="errorUlica">
+                        Unesite ulicu!
+                    </div>
+                    <div class="errorNevalidnaUlica">
+                        <div>Nevalidna ulica!</div>
+                        <div style="font-size: .700em;">Ulica ne može sadržati specijalne karaktere! </div>
+                    </div>
+                    
+
+                    <label class="brojStanaLabel" for="brojStana">Broj stana</label><br>
+                    <input class="brojStana" type="text" id="brojStana" maxlength="3"  onchange="removeErrorBrojStana()"><br>
+                    <div class="errorNevalidanBrojStana">
+                        Broj stana mora biti pozitivan broj ili BB!
+                    </div>
+
+
+                    <label class="brojUlazaLabel" for="brojUlaza">Broj ulaza</label><br>
+                    <input class="brojUlaza" type="text" maxlength="3" id="brojUlaza" disabled onchange="removeErrorBrojUlaza()"><br>
+                    <div class="errorNevalidanBrojUlaza">
+                        Broj ulaza mora biti pozitivan broj ili BB!
+                    </div>
+                </div>
+
+            </div>
+            
+            <div class="test2b">
+                <label class="informacijeLabel" for="informacije">Informacije</label><br>
+                <!---<input class="informacije" type="text" maxlength="10000" id="informacije" ><br>--->
+                <textarea class=" informacije" rows="4"  maxlength="10000"></textarea>
+            </div>
+        </div>
+    </div>
+
+
+       <div class="dugmad">
+        <button class="izmeniPodatke" type="button">Izmeni podatke</button> 
+        <button class="otkazi" type="button">Otkaži</button> 
+        <button class="sacuvaj" type="button">Sačuvaj</button> 
+       </div>
+    </div>
+    <script src="../../Poslodavac/JS/poslodavac-profil-podaci-forma.js" type="module"></script>  
+
+    
+
+
+    <script type="text/javascript"> //skripta za error-e pib
+        let pib = document.querySelector(".pib");
+        let erorPIB = document.querySelector(".errorPIB");
+            var removeErrorPIB = function(){
+                erorPIB.classList.remove('error');
+                pib.classList.remove('error');
+            }
+        let errorNevalidanPIB= document.querySelector(".errorNevalidanPIB");
+            var removeErrorNevalidanPIB = function(){
+                errorNevalidanPIB.classList.remove('error');
+                pib.classList.remove('error');
+            }
+    </script>
+
+    <script type="text/javascript"> //skripta za error-e maticni broj
+        let maticniBroj = document.querySelector(".maticniBroj");
+        let errorMaticniBroj = document.querySelector(".errorMaticniBroj");
+            var removeErrorMaticniBroj = function(){
+                errorMaticniBroj.classList.remove('error');
+                maticniBroj.classList.remove('error');
+            }
+        let errorNevalidanMaticniBroj = document.querySelector(".errorNevalidanMaticniBroj");
+            var removeErrorNevalidanMaticniBroj = function(){
+                errorNevalidanMaticniBroj.classList.remove('error');
+                maticniBroj.classList.remove('error');
+            }
+    </script>
+
+    <script type="text/javascript"> //skripta za error-e naziv
+        let naziv = document.querySelector(".naziv");
+        let errorNaziv = document.querySelector(".errorNaziv");
+            var removeErrorNaziv = function(){
+                errorNaziv.classList.remove('error');
+                naziv.classList.remove('error');
+            }
+        let errorNevalidanNaziv = document.querySelector(".errorNevalidanNaziv");
+            var removeErrorNevalidanNaziv = function(){
+                errorNevalidanNaziv.classList.remove('error');
+                naziv.classList.remove('error');
+            }
+    </script>
+
+
+
+    <script type="text/javascript"> //skripta za error-e fiksni telefon
+        let fiksniTelefon = document.querySelector(".fiksniTelefon");
+        let errorFiksniTelefon = document.querySelector(".errorFiksniTelefon");
+            var removeErrorFiksniTelefon = function(){
+                fiksniTelefon.classList.remove('error');
+                errorFiksniTelefon.classList.remove('error');
+            }
+        let errorNevalidanFiksniTelefon = document.querySelector(".errorNevalidanFiksniTelefon");
+            var removeErrorNevalidanFiksniTelefon = function(){
+                fiksniTelefon.classList.remove('error');
+                errorNevalidanFiksniTelefon.classList.remove('error');
+            }
+    </script>
+
+    <script type="text/javascript"> //skripta za error-e mobilni telefon
+    let mobilniTelefon = document.querySelector(".mobilniTelefon");
+    let errorMobilniTelefon = document.querySelector(".errorMobilniTelefon");
+        var removeErrorMobilniTelefon = function(){
+            errorMobilniTelefon.classList.remove('error');
+            errorFiksniTelefon.classList.remove('error');
+        }
+    let errorNevalidanMobilniTelefon = document.querySelector(".errorNevalidanMobilniTelefon");
+        var removeErrorNevalidanMobilniTelefon = function(){
+            mobilniTelefon.classList.remove('error');
+            errorNevalidanMobilniTelefon.classList.remove('error');
+        }
+    </script>
+
+    <script type="text/javascript"> //skripta za error-e delatnost
+        let delatnost = document.querySelector(".delatnost");
+        let errorDelatnost = document.querySelector(".errorDelatnost");
+            var removeErrorDelatnost = function(){
+                delatnost.classList.remove('error');
+                errorDelatnost.classList.remove('error');
+            }
+        let errorNevalidnaDelatnost = document.querySelector(".errorNevalidnaDelatnost");
+            var removeErrorNevalidnaDelatnost = function(){
+                delatnost.classList.remove('error');
+                errorNevalidnaDelatnost.classList.remove('error');
+            }
+    </script>
+
+    <script type="text/javascript"> //skripta za error-e grad
+        let grad = document.querySelector(".grad");
+        let errorGrad = document.querySelector(".errorGrad");
+            var removeErrorGrad = function(){
+                grad.classList.remove('error');
+                errorGrad.classList.remove('error');
+            }
+        let errorNevalidanGrad = document.querySelector(".errorNevalidanGrad");
+            var removeErrorNevalidanGrad = function(){
+                grad.classList.remove('error');
+                errorNevalidanGrad.classList.remove('error');
+            }
+    </script>
+
+    <script type="text/javascript"> //skripta za error-e ulica
+        let ulica = document.querySelector(".ulica");
+        let errorUlica = document.querySelector(".errorUlica");
+            var removeErrorUlica = function(){
+                ulica.classList.remove('error');
+                errorUlica.classList.remove('error');
+            }
+        let errorNevalidnaUlica = document.querySelector(".errorNevalidnaUlica");
+            var removeErrorNevalidnaUlica = function(){
+                ulica.classList.remove('error');
+                errorNevalidnaUlica.classList.remove('error');
+            }
+    </script>
+
+    <script type="text/javascript"> //skripta za error-e broj ulaza
+        let brojUlaza = document.querySelector(".brojUlaza");
+        let errorNevalidanBrojUlaza = document.querySelector(".errorNevalidanBrojUlaza");
+            var removeErrorBrojUlaza = function(){
+                brojUlaza.classList.remove('error');
+                errorNevalidanBrojUlaza.classList.remove('error');
+            }
+    </script>
+
+    <script type="text/javascript"> //skripta za error-e broj stana
+        let brojStana = document.querySelector(".brojStana");
+        let errorNevalidanBrojStana = document.querySelector(".errorNevalidanBrojStana");
+            var removeErrorBrojStana = function(){
+                brojStana.classList.remove('error');
+                errorNevalidanBrojStana.classList.remove('error');
+            }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,213 @@
+.forma1{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding: 20px;
+    border: solid gray 1px;
+    border-radius: 12px;
+    background: #ffffff;
+}
+
+.grad,.tip,.nacinPlacanja,.zadruga{
+    background-color: white;
+    padding:1%;
+}
+
+.gradVrednost, .tipVrednost, .nacinPlacanjaVrednost,.zadrugaVrednost{
+    min-width: max-content;
+}
+
+.nazivLabel, .brojPotrebnihRadnikaLabel, .rokZaPrijavuLabel, .datumIzvrsavanjaPoslaLabel, .tipLabel, .novacLabel, .zadrugaLabel, .nacinPlacanjaLabel,.opisLabel, .emailLabel, .fiksniTelefonLabel, .mobilniTelefonLabel,.delatnostLabel,.gradLabel, .ulicaLabel, .brojStanaLabel, .brojUlazaLabel{
+    color: black;
+    font-size: 20px;
+    font-family: system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans","Liberation Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+
+} 
+
+.naziv, .brojPotrebnihRadnika, .rokZaPrijavu, .datumIzvrsavanjaPosla,.tip, .novac, .nacinPlacanja, .opis, .zadruga, .mobilniTelefon,.fiksniTelefon, .grad, .ulica, .brojStana, .brojUlaza, .opis{
+    font-size: 20px;
+    margin-bottom: 5px;
+    font-family: system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans","Liberation Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    border: 1px solid #4e73df;
+    border-radius: 4px;
+} 
+
+ .naziv.error, .brojPotrebnihRadnika.error, .rokZaPrijavu.error, .datumIzvrsavanjaPosla.error, .tip.error, .novac.error, .nacinPlacanja.error, .zadruga.error, .opis.error, .mobilniTelefon.error, .fiksniTelefon.error, .grad.error, .ulica.error, .brojStana.error, .brojUlaza.error, .opis.error{
+    font-size: 20px;
+    margin-bottom: 5px;
+    font-family: system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans","Liberation Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    border: 1px solid red;
+    border-radius: 4px;
+    width: 100%;
+
+} 
+
+.opis.error{
+    width: 100%;
+}
+
+.errorNaziv, .errorNevalidanNaziv,.errorBrojPotrebnihRadnika ,.errorNevalidanBrojPotrebnihRadnika, .errorRokZaPrijavu, 
+.errorNevalidanRokZaPrijavu, .errorDatumIzvrsavanjaPosla, .errorNevalidanDatumIzvrsavanjaPosla, .errorTip,
+ .errorNovac,.errorNevalidanNovac, .errorUnesiOpis,.errorNacinPlacanja, .errorGrad, .errorZadruga, .errorNevalidanGrad, .errorUlica, .errorNevalidnaUlica, .errorNevalidanBrojUlaza,
+ .errorNevalidanBrojStana{
+    display:none;
+    font-size: 20px;
+    margin-top: -6px;
+    font-family: system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans","Liberation Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    color:red
+}
+
+.forma2LL{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.div2a{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+
+.forma2{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+
+
+.test1{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    min-width: fit-content;
+    width: 80%;
+}
+
+.opis{
+    resize: none;
+    font-size: 15px;
+    font-weight: 600;
+    
+}
+
+.test2a{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.test2b{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+
+.dugmad{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    justify-content: end;
+}
+
+
+
+.error{
+    animation: shake 0.2s ease-in-out 0s 2 ;
+
+}
+
+@keyframes shake {
+    0% { margin-left: 0rem; }
+    25% { margin-left: 0.5rem; }
+    75% { margin-left: -0.5rem; }
+    100% { margin-left: 0rem; }
+}
+
+.errorNaziv.error, .errorNevalidanNaziv.error, .errorBrojPotrebnihRadnika.error ,.errorNevalidanBrojPotrebnihRadnika.error, 
+.errorRokZaPrijavu.error, .errorNevalidanRokZaPrijavu.error, .errorDatumIzvrsavanjaPosla.error, .errorNevalidanDatumIzvrsavanjaPosla.error,
+.errorTip.error,.errorNovac.error,.errorNevalidanNovac.error, .errorNacinPlacanja.error,.errorZadruga.error,.errorUnesiOpis.error,
+.errorMobilniTelefon.error, .errorNevalidanMobilniTelefon.error, .errorDelatnost.error,.errorNevalidnaDelatnost.error, 
+.errorGrad.error, .errorNevalidanGrad.error, .errorUlica.error, .errorNevalidnaUlica.error, .errorNevalidanBrojUlaza.error,
+.errorNevalidanBrojStana.error{
+    display: block;
+    margin-bottom: 10px;
+    /* flex-wrap: wrap;*/
+}
+
+
+
+/*izmeni podatke dugme*/
+.proslediOglas{
+    align-self: center;
+    position: relative;
+    display:block;
+    height: 40px;
+    min-width: 200px;
+    margin: 10px 7px;
+    font-weight: 700;
+    font-size:20px;
+    letter-spacing: 2px;
+    color: #ffffff;
+    border: 1px #383736 solid;
+    border-radius: 4px;
+    outline: 0;
+    overflow:hidden;
+    background-color: #4e73df;
+    z-index: 1;
+    cursor: pointer;
+}
+    
+.proslediOglas:hover{
+    color: #4e73df;
+}
+  
+.proslediOglas:before{
+    content: "";
+    position: absolute;
+    background: white;
+    bottom: 0;
+    left: 100%;
+    right: 0;
+    top: 0;
+    z-index: -1;
+    transition: left 0.20s ease-in-out;
+}
+  
+.proslediOglas:hover:before{
+    left: 0;
+}
+  
+.proslediOglas:active:after{
+    left: 0;
+    top:0;
+    opacity: 1;
+    transition: 0s;
+}
+  
+.proslediOglas:active{
+    top: 2px;
+}
+
+.proslediOglas.blokiraj{
+    display: none;
+}
+
+.sacuvaj, .otkazi, .ukloniSliku, .dodajSliku{
+    display: none;
+}
+
+.sacuvaj.enable, .otkazi.enable,.ukloniSliku.enable, .dodajSliku.enable{
+    display: block;
+}
+

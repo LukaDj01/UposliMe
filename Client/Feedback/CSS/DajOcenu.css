@@ -1,0 +1,167 @@
+.vsc-initialized
+{
+    display: flex;
+}
+.glavni
+{
+    display: flex;
+    background: #ffffff;
+    padding: 20px 30px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.PosleOcene
+{
+    display: none;
+    font-size: 22px;
+    color:#4e73df;
+    font-family: system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans","Liberation Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+}
+.Naslov
+{
+    display: flex;
+    font-size: 28px;
+    margin-bottom: 3%;
+    font-family: system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans","Liberation Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+}
+.glavni .zvezdice input
+{
+    display: none;
+}
+.glavni form
+{
+    display: none;
+}
+.zvezdice label
+{
+    font-size: 40px;
+    color: #444;
+    padding: 10px;
+    float: right;
+    transition: all 0,2s ease;
+}
+input:not(:checked) ~ .fa-star:hover,
+input:not(:checked) ~ .fa-star:hover ~ .fa-star
+{
+    color:#4e73df;
+}
+input:checked ~ .fa-star
+{
+    color:#4e73df;
+}
+input#Ocena5:checked ~ .fa-star
+{
+    color:#4e73df;
+    text-shadow: 0 0 20px #4e73df;
+}
+form header
+{
+    display: flex;
+    width: 100%;
+    font-size: 25px;
+    color: #4e73df;
+    font-weight: 400;
+    margin: 5px 0 20px 0;
+    text-align: center;
+    justify-content: center;
+    transition: all 0,2s ease;
+    font-family: system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans","Liberation Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+}
+#Ocena1:checked ~ form header::before
+{
+    content: "Ne preporučujem!"
+}
+#Ocena2:checked ~ form header::before
+{
+    content: "Ispod proseka!"
+}
+#Ocena3:checked ~ form header::before
+{
+    content: "U redu!"
+}
+#Ocena4:checked ~ form header::before
+{
+    content: "Vrlo dobro!"
+}
+#Ocena5:checked ~ form header::before
+{
+    content: "Odlično!"
+}
+
+input:checked ~ form
+{
+    display: block;
+}
+form .textarea
+{
+    display: flex;
+    border: 2px solid #4e73df;
+    border-radius: 6px;
+    padding: 5px 5px 5px 5px;
+    height: 100px;
+    width: 100%;
+    overflow: hidden;
+}
+.Komentar
+{   
+    border: none;
+    display: flex;
+    height: 100%;
+    width: 100%;
+    outline: none;
+    font-size: 17px;
+    resize: none;
+    font-family: system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans","Liberation Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+}
+.error
+{
+    width: 100%;
+    display: none;
+    animation: shake 0.2s ease-in-out 0s 2;
+    color: red;
+    font-size: 15px;
+    font-family: system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans","Liberation Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+}
+.oceniDugme
+{
+    height: 65px;
+    width: 100%;
+    margin: 15px 0;
+}
+.oceniDugme
+{
+    cursor: pointer;
+    height: 100%;
+    width: 100%;
+    outline: none;
+    transition: all 0.3s ease;
+    align-content: center;
+    justify-content: center;
+    margin-top: 6%;
+    border-radius: 5px;
+    background-color: #4e73df;
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 24px;
+    font-family: system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans","Liberation Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    padding-bottom: 4px;
+}
+.oceniDugme:hover
+{
+    background-color: #2450d3;
+}
+@keyframes shake {
+    0% { margin-left: 0rem; }
+    25% { margin-left: 0.5rem; }
+    75% { margin-left: -0.5rem; }
+    100% { margin-left: 0rem; }
+  }
+
+  input .Komentar{
+    display: flex;
+  }

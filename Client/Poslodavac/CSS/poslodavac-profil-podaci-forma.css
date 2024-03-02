@@ -1,0 +1,408 @@
+.forma1{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding: 20px;
+    border: solid gray 1px;
+    border-radius: 12px;
+    background: #ffffff;
+}
+
+.nazivLabel, .pibLabel, .maticniBrojLabel, .informacijeLabel, .emailLabel, .fiksniTelefonLabel, .mobilniTelefonLabel,.delatnostLabel,.gradLabel, .ulicaLabel, .brojStanaLabel, .brojUlazaLabel{
+    color: black;
+    font-size: 20px;
+    font-family: system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans","Liberation Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+
+} 
+
+.naziv, .pib, .maticniBroj, .email, .delatnost, .informacije, .mobilniTelefon,.fiksniTelefon, .grad, .ulica, .brojStana, .brojUlaza{
+    font-size: 20px;
+    margin-bottom: 5px;
+    font-family: system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans","Liberation Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    border: 1px solid #4e73df;
+    border-radius: 4px;
+} 
+
+ .naziv.error, .pib.error, .maticniBroj.error, .delatnost.error, .informacije.error, .mobilniTelefon.error, .fiksniTelefon.error, .grad.error, .ulica.error, .brojStana.error, .brojUlaza.error{
+    font-size: 20px;
+    margin-bottom: 5px;
+    font-family: system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans","Liberation Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    border: 1px solid red;
+    border-radius: 4px;
+} 
+
+
+
+.errorNaziv, .errorNevalidanNaziv, .errorPIB,.errorNevalidanPIB, .errorMaticniBroj, .errorNevalidanMaticniBroj, .errorFiksniTelefon, .errorNevalidanFiksniTelefon, .errorMobilniTelefon, .errorNevalidanMobilniTelefon, .errorDelatnost,.errorNevalidnaDelatnost, .errorGrad, .errorNevalidanGrad, .errorUlica, .errorNevalidnaUlica, .errorNevalidanBrojUlaza,.errorNevalidanBrojStana{
+    display:none;
+    font-size: 20px;
+    margin-top: -6px;
+    font-family: system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans","Liberation Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    color:red
+}
+
+.forma2LL{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.div2a{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.slika{
+    display: flex;
+    border-radius: 10px;
+    width: 200px;
+    height: 200px;
+    border: 1px dashed #4e73df;
+    font-size: 17px;
+    padding-top: 45%;
+    padding-left: 30%;
+    background-size: 100% 100%;
+}
+
+.forma2{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.test1{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    min-width: fit-content;
+    width: 50%;
+}
+
+.informacije{
+    resize: none;
+    font-size: 15px;
+    font-weight: 600;
+    
+}
+
+.test2a{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.test2b{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    
+}
+
+
+.dugmad{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    justify-content: end;
+}
+
+
+
+.error{
+    animation: shake 0.2s ease-in-out 0s 2 ;
+
+}
+
+@keyframes shake {
+    0% { margin-left: 0rem; }
+    25% { margin-left: 0.5rem; }
+    75% { margin-left: -0.5rem; }
+    100% { margin-left: 0rem; }
+}
+
+.errorNaziv.error, .errorNevalidanNaziv.error, .errorPIB.error,.errorNevalidanPIB.error, .errorMaticniBroj.error, .errorNevalidanMaticniBroj.error, .errorFiksniTelefon.error, .errorNevalidanFiksniTelefon.error, .errorMobilniTelefon.error, .errorNevalidanMobilniTelefon.error, .errorDelatnost.error,.errorNevalidnaDelatnost.error, .errorGrad.error, .errorNevalidanGrad.error, .errorUlica.error, .errorNevalidnaUlica.error, .errorNevalidanBrojUlaza.error,.errorNevalidanBrojStana.error{
+    display: block;
+}
+
+
+
+/*izmeni podatke dugme*/
+.izmeniPodatke{
+    align-self: center;
+    position: relative;
+    display:block;
+    height: 40px;
+    min-width: 200px;
+    margin: 10px 7px;
+    font-weight: 700;
+    font-size:20px;
+    letter-spacing: 2px;
+    color: #ffffff;
+    border: 1px #383736 solid;
+    border-radius: 4px;
+    outline: 0;
+    overflow:hidden;
+    background-color: #4e73df;
+    z-index: 1;
+    cursor: pointer;
+}
+    
+.izmeniPodatke:hover{
+    color: #4e73df;
+}
+  
+.izmeniPodatke:before{
+    content: "";
+    position: absolute;
+    background: white;
+    bottom: 0;
+    left: 100%;
+    right: 0;
+    top: 0;
+    z-index: -1;
+    transition: left 0.20s ease-in-out;
+}
+  
+.izmeniPodatke:hover:before{
+    left: 0;
+}
+  
+.izmeniPodatke:active:after{
+    left: 0;
+    top:0;
+    opacity: 1;
+    transition: 0s;
+}
+  
+.izmeniPodatke:active{
+    top: 2px;
+}
+
+.izmeniPodatke.blokiraj{
+    display: none;
+}
+
+.sacuvaj, .otkazi, .ukloniSliku, .dodajSliku{
+    display: none;
+}
+
+.sacuvaj.enable, .otkazi.enable,.ukloniSliku.enable, .dodajSliku.enable{
+    display: block;
+}
+
+/*sacuvaj izmene buton*/
+.sacuvaj{
+    align-self: center;
+    position: relative;
+    height: 40px;
+    min-width: 200px;
+    margin: 10px 7px;
+    font-weight: 700;
+    font-size:20px;
+    letter-spacing: 2px;
+    color: #ffffff;
+    border: 1px #383736 solid;
+    border-radius: 4px;
+    outline: 0;
+    overflow:hidden;
+    background-color: #329c4d;
+    z-index: 1;
+    cursor: pointer;
+}
+    
+.sacuvaj:hover{
+    color: #329c4d;
+}
+  
+.sacuvaj:before{
+    content: "";
+    position: absolute;
+    background: white;
+    bottom: 0;
+    left: 100%;
+    right: 0;
+    top: 0;
+    z-index: -1;
+    transition: left 0.20s ease-in-out;
+}
+  
+.sacuvaj:hover:before{
+    left: 0;
+}
+  
+.sacuvaj:active:after{
+    left: 0;
+    top:0;
+    opacity: 1;
+    transition: 0s;
+}
+  
+.sacuvaj:active{
+    top: 2px;
+}
+
+/*otkazi izmene buton*/
+.otkazi{
+    align-self: center;
+    position: relative;
+    height: 40px;
+    min-width: 200px;
+    margin: 10px 7px;
+    font-weight: 700;
+    font-size:20px;
+    letter-spacing: 2px;
+    color: #ffffff;
+    border: 1px #383736 solid;
+    border-radius: 4px;
+    outline: 0;
+    overflow:hidden;
+    background-color: #c54a4a;
+    z-index: 1;
+    cursor: pointer;
+}
+    
+.otkazi:hover{
+    color: #c54a4a;
+}
+  
+.otkazi:before{
+    content: "";
+    position: absolute;
+    background: white;
+    bottom: 0;
+    left: 100%;
+    right: 0;
+    top: 0;
+    z-index: -1;
+    transition: left 0.20s ease-in-out;
+}
+  
+.otkazi:hover:before{
+    left: 0;
+}
+  
+.otkazi:active:after{
+    left: 0;
+    top:0;
+    opacity: 1;
+    transition: 0s;
+}
+  
+.otkazi:active{
+    top: 2px;
+}
+
+/*ukloni sliku*/
+
+.ukloniSliku{
+    align-self: center;
+    position: relative;
+    height: 30px;
+    text-align: center;
+    min-width: 200px;
+    margin: 10px 7px;
+    margin-bottom: 5px;
+    font-weight: 650;
+    font-size:18px;
+    letter-spacing: 2px;
+    color: #ffffff;
+    border: 1px #383736 solid;
+    border-radius: 4px;
+    outline: 0;
+    overflow:hidden;
+    background-color: #c54a4a;
+    z-index: 1;
+    cursor: pointer;
+}
+    
+.ukloniSliku:hover{
+    color: #c54a4a;
+}
+  
+.ukloniSliku:before{
+    content: "";
+    position: absolute;
+    background: white;
+    bottom: 0;
+    left: 100%;
+    right: 0;
+    top: 0;
+    z-index: -1;
+    transition: left 0.20s ease-in-out;
+}
+  
+.ukloniSliku:hover:before{
+    left: 0;
+}
+  
+.ukloniSliku:active:after{
+    left: 0;
+    top:0;
+    opacity: 1;
+    transition: 0s;
+}
+  
+.ukloniSliku:active{
+    top: 2px;
+}
+
+/*ukloni sliku*/
+
+.dodajSliku{
+    align-self: center;
+    position: relative;
+    height: 30px;
+    width: fit-content;
+    text-align: center;
+    min-width: 200px;
+    margin-left: 7px;
+    font-weight: 650;
+    font-size:18px;
+    letter-spacing: 2px;
+    color: #ffffff;
+    border: 1px #383736 solid;
+    border-radius: 4px;
+    outline: 0;
+    overflow:hidden;
+    background-color: #329c4d;
+    z-index: 1;
+    cursor: pointer;
+}
+    
+.dodajSliku:hover{
+    color: #329c4d;
+}
+  
+.dodajSliku:before{
+    content: "";
+    position: absolute;
+    background: white;
+    bottom: 0;
+    left: 100%;
+    right: 0;
+    top: 0;
+    z-index: -1;
+    transition: left 0.20s ease-in-out;
+}
+  
+.dodajSliku:hover:before{
+    left: 0;
+}
+  
+.dodajSliku:active:after{
+    left: 0;
+    top:0;
+    opacity: 1;
+    transition: 0s;
+}
+  
+.dodajSliku:active{
+    top: 2px;
+}

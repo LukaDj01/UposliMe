@@ -1,0 +1,79 @@
+.neprocitana{
+    color: #4e73df;
+    font-size: 50px;
+    justify-self: center;
+    align-self: center;
+    /* za neprocitane efekti? */
+}
+
+.notifDiv{
+    display: flex;
+    flex-wrap: wrap;
+    grid-template-columns: auto auto auto;
+    border: 2px solid #466ce0;
+    border-radius: 7px;
+    margin-bottom: 15px;
+    padding: 10px;
+    min-width: fit-content;
+    justify-content: space-between;
+}
+
+.korisnikSlika{
+    
+    background-size: 100% 100%;
+    height: 100%;
+    width: 100%;
+}
+
+.slikaDiv{
+    height: 118px;
+    width: 118px;
+}
+
+.neprocitanaDiv{
+    display: flex;
+    align-items: center;
+}
+
+.neprocitana{
+    height: 30px;
+    width: 30px;
+    margin-right: 10px;
+}
+
+.srednjiDiv{
+    display: flex;
+    flex-direction: column;
+    justify-self:flex-start;
+    margin-left: 15px;
+}
+
+.slikaSrednjiDiv{
+    display: flex;
+    flex-wrap: wrap;
+    align-self: center;
+}
+
+.notifNijeNadjenDiv{
+    border: 5px solid #4e73df;
+    text-align: center;
+}
+
+.porukaNijeNadjen{
+    padding: 30px;
+    color: #081230;
+}   
+
+.naslovBrOglasa{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.brOglasa{
+    color: black;
+    padding-top: 10px;
+}
+
+.brOglasaDiv{
+    display: flex;
+}

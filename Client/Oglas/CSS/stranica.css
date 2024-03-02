@@ -1,0 +1,73 @@
+.straniceDiv{
+    display: flex;
+    justify-content: center;
+}
+
+.stranicaPolje, .zadnjaStranicaPolje, .prvaStranicaPolje{
+    cursor: pointer;
+    background-color:#4e72dfda;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    width: 35px;
+    height: 35px;
+    margin-left: 10px;
+    padding-top: 6px;
+    border-radius: 5px;
+}
+
+.triTackePolje{
+    border-radius: 5px;
+    background-color:  #4e72dfda;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    width: 35px;
+    height: 35px;
+    margin-left: 10px;
+    padding-top: 6px;
+}
+
+.triTackeVrednost{
+    color: white;
+    display: flex;
+    font-weight: 700;
+}
+
+.stranicaVrednost, .zadnjaStranicaVrednost, .prvaStranicaVrednost{
+    cursor: pointer;
+    color: white;
+    display: flex;
+    font-weight: 700;
+}
+
+.sledecaPolje, .prethodnaPolje{
+    cursor: pointer;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    width: 55px;
+    height: 35px;
+    margin-left: 10px;
+    border-radius: 5px;
+    padding-top: 0.5px;
+    border: 3px solid  #4e72dfea;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.sledecaVrednost, .prethodnaVrednost{
+    color: #4e73df;
+    cursor: pointer;
+    display: flex;
+}
+
+.stranicaPolje:hover, .zadnjaStranicaPolje:hover, .prvaStranicaPolje:hover{
+    background-color: #3d5ab3;
+}
+
+.sledecaPolje:hover, .prethodnaPolje:hover{
+    border: 3px solid #3d5ab3;
+    color: #3d5ab3;
+    
+}

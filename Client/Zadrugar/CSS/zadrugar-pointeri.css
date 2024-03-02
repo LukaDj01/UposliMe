@@ -1,0 +1,6 @@
+.uposliMeIkona, .pocetna, .mojaApliciranja, .prijaviSmetnje, .obrisiProfil, .promeniLozinku, .ugovori, .ocene, .prikaziSveNotif, .notifikacija, .zadruga, .zadrugar, .poslodavac  {
+    cursor: pointer;
+}
+.zadruga:hover,.poslodavac:hover, .zadrugar:hover{
+    color: rgb(85, 85, 85);
+}

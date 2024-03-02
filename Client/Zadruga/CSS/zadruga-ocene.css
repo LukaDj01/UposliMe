@@ -1,0 +1,56 @@
+
+
+.zaIzcrtavanje{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-self: center;
+  justify-content: center;
+}
+
+.naslov-sortiranjeDiv{
+  display: flex;
+  align-self: flex-start;
+}
+
+.ocenePodaci{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.ocenePrikaz{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.oceneDiv
+{   display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    padding: 10px;
+    height: 100%;
+    margin-bottom: 25px;
+    border: 2px solid #4e73df;
+    background-color: rgb(255, 255, 255);
+    
+}
+
+.divOcena{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    font-size: 21px;
+    
+}
+
+.divKomentar
+{
+    font-size: 16px;
+    font-weight: 600;
+    font-family: system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans","Liberation Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    color: rgb(102, 100, 100);
+}
